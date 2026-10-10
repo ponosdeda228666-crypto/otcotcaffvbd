@@ -367,7 +367,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         keyboard = [
             [InlineKeyboardButton(get_text(lang, "create_deal_button"), callback_data='create_deal')],
             [InlineKeyboardButton(get_text(lang, "add_wallet_button"), callback_data='wallet_menu')],
-            [InlineKeyboardButton(get_text(lang, "support_button"), url='https://t.me/Blum_Relayer'), InlineKeyboardButton(get_text(lang, "change_lang_button"), callback_data='change_lang')],
+            [InlineKeyboardButton(get_text(lang, "support_button"), url='https://t.me/Blumsupport'), InlineKeyboardButton(get_text(lang, "change_lang_button"), callback_data='change_lang')],
         ]
         if user_id in ADMIN_ID:
             keyboard.append([InlineKeyboardButton("🔧 Админ-панель", callback_data='admin_panel')])
@@ -426,7 +426,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
             keyboard = [
                 [InlineKeyboardButton(get_text(lang, "create_deal_button"), callback_data='create_deal')],
                 [InlineKeyboardButton(get_text(lang, "add_wallet_button"), callback_data='wallet_menu')],
-                [InlineKeyboardButton(get_text(lang, "support_button"), url='https://t.me/Blum_Relayer'), InlineKeyboardButton(get_text(lang, "change_lang_button"), callback_data='change_lang')],
+                [InlineKeyboardButton(get_text(lang, "support_button"), url='https://t.me/Blumsupport'), InlineKeyboardButton(get_text(lang, "change_lang_button"), callback_data='change_lang')],
             ]
             if user_id in ADMIN_ID:
                 keyboard.append([InlineKeyboardButton("🔧 Админ-панель", callback_data='admin_panel')])
@@ -557,7 +557,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
                         parse_mode="HTML",
                         reply_markup=InlineKeyboardMarkup([
                             [InlineKeyboardButton(get_text(seller_lang, "seller_confirm_sent_button"), callback_data=f'seller_confirm_sent_{deal_id}')],
-                            [InlineKeyboardButton(get_text(seller_lang, "contact_support_button"), url='https://t.me/Blum_Relayer')]
+                            [InlineKeyboardButton(get_text(seller_lang, "contact_support_button"), url='https://t.me/Blumsupport')]
                         ])
                     )
 
@@ -606,7 +606,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
                         parse_mode="HTML",
                         reply_markup=InlineKeyboardMarkup([
                             [InlineKeyboardButton(get_text(buyer_lang, "buyer_confirm_received_button"), callback_data=f'buyer_confirm_received_{deal_id}')],
-                            [InlineKeyboardButton(get_text(buyer_lang, "contact_support_button"), url='https://t.me/Blum_Relayer')]
+                            [InlineKeyboardButton(get_text(buyer_lang, "contact_support_button"), url='https://t.me/Blumsupport')]
                         ])
                     )
 
@@ -681,7 +681,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
             keyboard = [
                 [InlineKeyboardButton(get_text(new_lang, "create_deal_button"), callback_data='create_deal')],
                 [InlineKeyboardButton(get_text(new_lang, "add_wallet_button"), callback_data='wallet_menu')],
-                [InlineKeyboardButton(get_text(new_lang, "support_button"), url='https://t.me/Blum_Relayer'), InlineKeyboardButton(get_text(new_lang, "change_lang_button"), callback_data='change_lang')],
+                [InlineKeyboardButton(get_text(new_lang, "support_button"), url='https://t.me/Blumsupport'), InlineKeyboardButton(get_text(new_lang, "change_lang_button"), callback_data='change_lang')],
             ]
             if user_id in ADMIN_ID:
                 keyboard.append([InlineKeyboardButton("🔧 Админ-панель", callback_data='admin_panel')])
@@ -888,7 +888,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
                                           middleman_username=MIDDLEMAN_USERNAME) # <--- ИЗМЕНЕНО
                 await context.bot.send_message(seller_id, seller_message, parse_mode="HTML", reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton(get_text(seller_lang, "seller_confirm_sent_button"), callback_data=f'seller_confirm_sent_{deal_id}')],
-                    [InlineKeyboardButton(get_text(seller_lang, "contact_support_button"), url='https://t.me/Blum_Relayer')]
+                    [InlineKeyboardButton(get_text(seller_lang, "contact_support_button"), url='https://t.me/Blumsupport')]
                 ]))
 
                 # Отправляем уведомление о подтверждении сделки
