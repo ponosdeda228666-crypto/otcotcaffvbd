@@ -20,8 +20,8 @@ MouseInfo==0.1.3
 multidict==6.7.0
 propcache==0.4.0
 PyAutoGUI==0.9.54
-pydantic==2.11.10
-pydantic_core==2.33.2
+pydantic==2.10.6
+pydantic_core==2.27.2
 pygame==2.6.1
 PyGetWindow==0.0.9
 PyMsgBox==2.0.1
